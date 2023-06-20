@@ -35,8 +35,8 @@ class User:
         if len(results) >= 1:
             flash('Email is already taken.')
             is_valid = False
-        if len(data['password']) < 8:
-            flash('Password must be 8 or more characters long!')
+        if len(data['password']) < 6:
+            flash('Password must be 6 or more characters long!')
             is_valid = False
         if data['password'] != data['confirm_password']:
             flash ('Passwords did not match.')

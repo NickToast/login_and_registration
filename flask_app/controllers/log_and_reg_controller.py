@@ -28,7 +28,7 @@ def loginuser():
     #if email exists, now check pw by unhashing then comparing
     #two arguments, first one is what is the hashed pw, second is what we compare it to
     if not bcrypt.check_password_hash(user_in_db.password, request.form['loginpassword']):
-        flash('Invalid Email/Passwordssssss')
+        flash('Invalid Email/Passwords')
         return redirect ('/login')
 
     session['user_id'] = user_in_db.id
